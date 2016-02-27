@@ -1,0 +1,8 @@
+<li id="textbox-<%= textbox.id %>">
+  <%= link_to gravatar_for(textbox.user, size: 50), textbox.user %>
+  <span class="user"><%= link_to textbox.user.name, textbox.user %></span>
+  <span class="content"><%= textbox.content %></span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(textbox.created_at) %> ago.
+  </span>
+</li>

@@ -1,4 +1,20 @@
-<h1>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+  <h2>
   <%= gravatar_for @user %>
   <%= @user.name %>
-</h1>
+   </h2>
+ </section>
+  </aside>
+  <div class="col-md-8">
+    <% if @user.textboxes.any? %>
+      <h3>Picture (<%= @user.textboxes.count %>)</h3>
+      <ol class="textboxes">
+        <%= render partial: 'textboxes/textbox', collection: @textboxes %>
+      </ol>
+    <% end %>
+  </div>
+</div>
+
+

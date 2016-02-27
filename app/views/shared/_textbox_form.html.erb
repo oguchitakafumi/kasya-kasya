@@ -1,0 +1,7 @@
+<%= form_for(@textbox) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="field">
+    <%= f.text_area :content, placeholder: "Compose new picture..." %>
+  </div>
+  <%= f.submit "kasya", class: "btn btn-primary" %>
+<% end %>
